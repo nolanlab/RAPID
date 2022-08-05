@@ -36,8 +36,9 @@ pluginpath = 'C:\Program Files\fiji-win64\Fiji.app\plugins\';\
 mjipath = 'C:\Program Files\MATLAB\R2021a\java\mij.jar';\
 ijpath = 'C:\Program Files\MATLAB\R2021a\java\ij.jar';\
 
-## Step 5: 
+## Step 5: In time_benchmark.m file, change the following parameters:
 
+% specify the directory of raw data: path_input\
 
 # codex-preprocess
 
