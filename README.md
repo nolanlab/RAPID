@@ -23,17 +23,18 @@ PSF_BW_GFP.tif\
 PSF_BW_Cy3.tif\
 PSF_BW_Cy5.tif\
 
-Step 2: Install Matlab 2020a or newer version (include Image Processing Toolbox, Parallel Computing Toolbox, Signal Processing Toolbox, etc.)
+## Step 2: Install Matlab 2020a or newer version (include Image Processing Toolbox, Parallel Computing Toolbox, Signal Processing Toolbox, etc.)
 
-Step 3: Download  Fiji (https://imagej.net/software/fiji/) and install the "MIST" plugin
+## Step 3: Download  Fiji (https://imagej.net/software/fiji/) and install the "MIST" plugin
 
 pluginpath = 'C:\Program Files\fiji-win64\Fiji.app\plugins\';\
 
-Step 4: Copy ij.jar and mij.jar to the following paths:
+## Step 4: Copy ij.jar and mij.jar to the following paths:
+
 mjipath = 'C:\Program Files\MATLAB\R2021a\java\mij.jar';\
 ijpath = 'C:\Program Files\MATLAB\R2021a\java\ij.jar';\
 
-Step 5: 
+## Step 5: 
 
 
 # codex-preprocess
