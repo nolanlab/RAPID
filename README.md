@@ -6,6 +6,8 @@ RAPID deconvolves large-scale, high-dimensional fluorescence imaging data, stitc
 
 ## Step 1: Generate PSF for four filter channels following the ppt
 
+Steps to create PSF.pptx\
+
 Use imageJ plugin PSF generator to generate 4 PSF for each filter:
 http://bigwww.epfl.ch/algorithms/psfgenerator/ \
 Parameters:\
