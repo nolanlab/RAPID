@@ -4,7 +4,7 @@
 RAPID deconvolves large-scale, high-dimensional fluorescence imaging data, stitches and registers images with axial and lateral drift correction, and minimizes tissue autofluorescence such as that introduced by erythrocytes.
 
 
-Step 1: Generate PSF for four filter channels following the ppt
+## Step 1: Generate PSF for four filter channels following the ppt
 
 Use imageJ plugin PSF generator to generate 4 PSF for each filter:
 http://bigwww.epfl.ch/algorithms/psfgenerator/ \
