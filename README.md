@@ -7,7 +7,7 @@ RAPID deconvolves large-scale, high-dimensional fluorescence imaging data, stitc
 Step 1: Generate PSF for four filter channels following the ppt
 
 Use imageJ plugin PSF generator to generate 4 PSF for each filter:
-http://bigwww.epfl.ch/algorithms/psfgenerator/ \\
+http://bigwww.epfl.ch/algorithms/psfgenerator/ \
 Parameters:
 Keyence microscope: 
 20x objective, NA 0.75, Working distance = 350 um
