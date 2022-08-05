@@ -4,7 +4,7 @@
 RAPID deconvolves large-scale, high-dimensional fluorescence imaging data, stitches and registers images with axial and lateral drift correction, and minimizes tissue autofluorescence such as that introduced by erythrocytes.
 
 
-**Step 1: Generate PSF for four filter channels following the ppt **
+## Step 1: Generate PSF for four filter channels following the ppt
 
 Use imageJ plugin PSF generator to generate 4 PSF for each filter:
 http://bigwww.epfl.ch/algorithms/psfgenerator/ \
@@ -29,7 +29,7 @@ PSF_BW_Cy5.tif\
 
 pluginpath = 'C:\Program Files\fiji-win64\Fiji.app\plugins\';\
 
-## Step 4: Copy ij.jar and mij.jar to the following paths:
+## Step 4: Download and copy ij.jar and mij.jar to the following paths:
 
 mjipath = 'C:\Program Files\MATLAB\R2021a\java\mij.jar';\
 ijpath = 'C:\Program Files\MATLAB\R2021a\java\ij.jar';\
