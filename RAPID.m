@@ -116,6 +116,8 @@ colFinal = im_col*nTilCol - im_col*(overlapRatio/100)*(nTilCol-1) + margin;
 
 bgSubtract_par(reg_range,cyc_range,texp,cyc_bg,path_output,neg_flag,rowFinal,colFinal,nCh);
 % bgSubtract(reg_range,cyc_range,texp,cyc_bg,path_output,neg_flag,cpu_num,rowFinal,colFinal,nCh); % Elapsed time is 76.505625 seconds.
+% bgSubtractRBC(reg_range,cyc_range,texp,cyc_bg,path_output,neg_flag,cpu_num,rowFinal,colFinal,nCh); % remove strong autofluorescence
+
 disp('Background subtraction done...');
 % toc
 
