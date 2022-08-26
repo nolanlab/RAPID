@@ -2,6 +2,7 @@
 ## RAPID: a Real-time, GPU-Accelerated Parallelized Image processing software for large-scale multiplexed fluorescence microscopy Data
 
 RAPID deconvolves large-scale, high-dimensional fluorescence imaging data, stitches and registers images with axial and lateral drift correction, and minimizes tissue autofluorescence such as that introduced by erythrocytes.
+<br/>
 
 ### Step 1: Install Matlab 2020a or newer version 
 
@@ -11,14 +12,14 @@ RAPID deconvolves large-scale, high-dimensional fluorescence imaging data, stitc
 
 ![java heap memory](https://user-images.githubusercontent.com/57729689/186957714-362bf4af-e3bc-4ee3-835b-caa0772cdb76.png)
 
-
+<br/>
 
 
 ### Step 2: Download  Fiji (https://imagej.net/software/fiji/) and install the "MIST" plugin
 
 ![MIST](https://user-images.githubusercontent.com/57729689/186963300-81cd3657-0c40-4d8c-96f8-240fe1ca5419.JPG)
 
-
+<br/>
 
 
 ### Step 3: Generate point-spread functions (PSF) 
@@ -44,7 +45,7 @@ RAPID deconvolves large-scale, high-dimensional fluorescence imaging data, stitc
   &nbsp;- PSF_BW_GFP.tif\
   &nbsp;- PSF_BW_Cy3.tif\
   &nbsp;- PSF_BW_Cy5.tif
-
+<br/>
 
 ### Step 4: Running ImageJ and Fiji within Matlab
 (Reference: https://www.mathworks.com/matlabcentral/fileexchange/47545-mij-running-imagej-and-fiji-within-matlab)
@@ -52,7 +53,7 @@ RAPID deconvolves large-scale, high-dimensional fluorescence imaging data, stitc
 
 - mjipath = 'C:\Program Files\MATLAB\R2021a\java\mij.jar';
 - ijpath = 'C:\Program Files\MATLAB\R2021a\java\ij.jar';
-
+<br/>
 
 ### Step 5: In RAPID.m file, change the following parameters:
 
@@ -122,7 +123,7 @@ texp = [1,6.667,500.000,500.000,500.000
 mode = 'memopoint';
 
 ```
-
+<br/>
 
 ### Step 6: Hit "Run" to process CODEX data using RAPID
 #### 1. RAPID consists of 3 main modules: 
@@ -138,14 +139,19 @@ mode = 'memopoint';
 
 ![folders](https://user-images.githubusercontent.com/57729689/186965845-d3ce3eb9-4b81-480b-b56b-a9bef14c4200.JPG)
 
+<br/>
+
+### Step 7: Additional module to improve marker detection by reducing intense tissue autofluorescence from images such as those from red blood cells (RBC)
+#### 1. Run RBCRemoval.m to generate binary masks for RBC contaminated pixels
+#### 2. In RAPID.m, run bgSubtractRBC instead of bgSubtract to set the intensity of RBC contaminated pixels to zero
+<br/><br/>
 
 ## Instructions for Making Modifications:
 1. For CODEX users, if you are using a different microscope than Keyence BZX-700, please change the image directory and name accordingly
 2. For different imaging settings (image size, NA, wavelength, z-step, etc.), you need to generate new PSF images following the above instructions.
 3. For other multiplexed imaging technologies, if there is no z-stack, you can skip the deconvolution and start from image stitching step.
 
-
-
+<br/><br/>
 
 # codex-preprocess
 
