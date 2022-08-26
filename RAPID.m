@@ -62,7 +62,8 @@ mode = 'memopoint';
 %% Don't change the following code
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 parpool(cpu_num)
-%% Step 1:
+% ------------------------------------------------------------------------
+%% Module 1:
 %  - decovolution
 %  - identify the best focus plane
 % tic
@@ -71,7 +72,8 @@ deconv_par(reg_range, cyc_range, til_range, nZ, path_input, path_output, path_ps
 disp('Deconvolution done...');
 % toc
 
-%% stitch individual tiles
+% ------------------------------------------------------------------------
+%% stitch individual tiles: lateral drift compensation
 % tic
 if nTil >1
     disp('Start stitching...');
@@ -85,19 +87,22 @@ end
 % toc
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Step 2:
-%  - drift compensation:
+%% Module 2:
+% ------------------------------------------------------------------------
+%  - axial drift compensation:
 % tic
 disp('Start drift compensation...');
 driftCompensate_par(reg_range,cyc_range,path_output,nCh,nTil);
 % driftCompensate(reg_range,cyc_range,path_output,cpu_num,nCh,nTil);
 disp('Drift compensation done...');
 % toc
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Step 3:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Module 3:
+% -------------------------------------------------------------------------
 % subtract background cycle
 % tic
 disp('Start background subtraction...');
@@ -114,9 +119,9 @@ bgSubtract_par(reg_range,cyc_range,texp,cyc_bg,path_output,neg_flag,rowFinal,col
 disp('Background subtraction done...');
 % toc
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Step 4:
-% concentenate all the stacks into a hyperstack
+
+% ------------------------------------------------------------------------
+%% concentenate all the stacks into a hyperstack
 % tic
 disp('Start concatenation...');
 genHyperstack(reg_range, cyc_range, path_output,nCyc,nCh)
