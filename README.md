@@ -189,8 +189,8 @@ mode = 'memopoint';
 2. For different imaging settings (image size, NA, wavelength, z-step, etc.), you need to generate new PSF images following the above instructions.
 3. For other multiplexed imaging technologies, if there is no z-stack, you can skip the deconvolution and start from image stitching step.
 
-<br/><br/>
+<br/><br/><br/>
 
-# codex-preprocess
+# Instructions for Cloud Deployment
 
 Current dev AMI with latest dev version installed: [ami-0eed9af897571b732](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#ImageDetails:imageId=ami-0eed9af897571b732)
