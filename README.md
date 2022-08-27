@@ -4,6 +4,16 @@
 RAPID deconvolves large-scale, high-dimensional fluorescence imaging data, stitches and registers images with axial and lateral drift correction, and minimizes tissue autofluorescence such as that introduced by erythrocytes.
 <br/>
 
+### Prerequisites
+- Processing computer
+- Matlab
+- Fiji
+- Download RAPID
+
+<br/>
+
+### Installation & Running the Programs:
+
 ### Step 1: Install Matlab 2020a or newer version 
 
 #### 1. During installation during, include Image Processing Toolbox, Parallel Computing Toolbox, Signal Processing Toolbox, etc. 
@@ -135,7 +145,35 @@ mode = 'memopoint';
 - Note: imageJ will be running for image stitching and concatenation step. Do not interrupt it while it is running.
 
 
-#### 2. The output images of each module are saved in three seperate folders for each tissue region. This allows user to check the quality of output images after each step.
+#### 2. The input file format for Keyence experiment contains the following format:
+(1) For Keyence - memopoint mode, the input format and structure is:
+- cyc001_reg001
+  - 1.bcf
+  - 1_00001_Z001_CH1.tif
+  - 1_00001_Z001_CH2.tif
+  - 1_00001_Z001_CH3.tif
+  - 1_00001_Z001_CH4.tif
+  - .....
+  - 1_00009_Z006_CH1.tif
+  - 1_00009_Z006_CH2.tif
+  - 1_00009_Z006_CH3.tif
+  - 1_00009_Z006_CH4.tif
+
+<img width="283" alt="input-memo" src="https://user-images.githubusercontent.com/57729689/187006381-9b6ef337-849d-4277-be88-bebde8718680.PNG">
+
+(2) For Keyence - multipoint mode, the input format and structure is:
+- cyc001_reg001
+  - XY01
+    - 1_XY01.bcf
+    - 1_XY01_00001_Z001_CH1.tif
+    - 1_XY01_00001_Z001_CH2.tif
+    - 1_XY01_00001_Z001_CH3.tif
+    - 1_XY01_00001_Z001_CH4.tif
+
+<img width="353" alt="input-multipoint" src="https://user-images.githubusercontent.com/57729689/187006384-780a8c07-a5ee-4529-9e13-78372c837185.PNG">
+
+
+#### 3. The output images of each module are saved in three seperate folders for each tissue region. This allows user to check the quality of output images after each step.
 
 ![folders](https://user-images.githubusercontent.com/57729689/186965845-d3ce3eb9-4b81-480b-b56b-a9bef14c4200.JPG)
 
