@@ -137,9 +137,9 @@ mode = 'memopoint';
 
 ### Step 6: Hit "Run" to process CODEX data using RAPID
 #### 1. RAPID consists of 3 main modules: 
-(1) 3D deconvolution and tile stitching (lateral drift correction)
+(1) 3D deconvolution and axial drift compensation
 
-(2) Axial drift correction:
+(2) within-cycle and betwee-cycle lateral drift compensation
 
 (3) Background subtraction and concatenation of all the images into a hyperstack
 - Note: imageJ will be running for image stitching and concatenation step. Do not interrupt it while it is running.
