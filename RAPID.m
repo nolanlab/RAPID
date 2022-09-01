@@ -72,6 +72,8 @@ deconv_par(reg_range, cyc_range, til_range, nZ, path_input, path_output, path_ps
 disp('Deconvolution done...');
 % toc
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Module 2: lateral drift compensation
 % ------------------------------------------------------------------------
 %% stitch individual tiles: within-cycle lateral drift compensation
 % tic
@@ -86,10 +88,9 @@ if nTil >1
 end
 % toc
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Module 2:
+
 % ------------------------------------------------------------------------
-%  - between-cycle lateral drift compensation:
+%% between-cycle lateral drift compensation:
 
 % tic
 disp('Start drift compensation...');
