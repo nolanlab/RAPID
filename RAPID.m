@@ -65,7 +65,7 @@ parpool(cpu_num)
 % ------------------------------------------------------------------------
 %% Module 1:
 %  - decovolution
-%  - identify the best focus plane
+%  - identify the best focus plane (axial drift compensation)
 % tic
 disp('Start deconvolution...');
 deconv_par(reg_range, cyc_range, til_range, nZ, path_input, path_output, path_psf,im_row,im_col,nCh,mode)
@@ -73,7 +73,7 @@ disp('Deconvolution done...');
 % toc
 
 % ------------------------------------------------------------------------
-%% stitch individual tiles: lateral drift compensation
+%% stitch individual tiles: within-cycle lateral drift compensation
 % tic
 if nTil >1
     disp('Start stitching...');
@@ -89,7 +89,8 @@ end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Module 2:
 % ------------------------------------------------------------------------
-%  - axial drift compensation:
+%  - between-cycle lateral drift compensation:
+
 % tic
 disp('Start drift compensation...');
 driftCompensate_par(reg_range,cyc_range,path_output,nCh,nTil);
