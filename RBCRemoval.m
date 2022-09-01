@@ -34,8 +34,8 @@ for i = 1:length(nReg)
         
         % ----------------------------------------------------------------
         %% identify regions with mean intensity >= 65535*0.3
-        raw_name = [filefolder,'reg',num2str(reg),'\1_deconv_stitch\cycle1\reg',num2str(reg),'_tile_1.tif'];
-        im = imread(raw_name,ch);
+        % raw_name = [filefolder,'reg',num2str(reg),'\1_deconv_stitch\cycle1\reg',num2str(reg),'_tile_1.tif'];
+        % im = imread(raw_name,ch);
         
         stats = regionprops(bw,im,'MeanIntensity','PixelIdxList');
         av_int = [stats.MeanIntensity];
@@ -46,7 +46,7 @@ for i = 1:length(nReg)
         mask(pixel_idx) = 0;
         
         %% remove fluorescent myeloid cells by nuclear staining
-        im_hchst = imread(raw_name,1);
+        im_hchst = imread(filename,1);
         %     figure,imshow(im_hchst,[])
         %     figure,histogram(im_hchst(:))
         stats1 = regionprops(bw,im_hchst,'MeanIntensity','PixelIdxList');
