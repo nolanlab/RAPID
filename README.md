@@ -193,15 +193,15 @@ mode = 'memopoint';
 
 # Instructions for Cloud Deployment
 
-# Steps to reproduce Windows AMI 635198895848/codex-preprocess-1.0.0, [ami-xxx](link)
+## Steps to reproduce Windows AMI 635198895848/codex-preprocess-1.0.0, [ami-xxx](link)
 
 Following this guide is only required to re-create a CODEX analysis server from a base Windows 2019 server image. The Amazon Machine image described in the README is preconfigured for CODEX processing.
 
-### Base Amazon Machine Image
+#### Base Amazon Machine Image
 
 The base Amazon Machine Image used is the latest official `Microsoft Windows Server 2019 with NVIDIA Tesla Driver` image, described [here](https://aws.amazon.com/marketplace/pp/prodview-jrxucanuabmfm).
 
-### Security
+#### Security
 
 For security, we rely on incoming connection restriction at the AWS Security Group level. Under `Server Management`, disable for all regions:
 
@@ -209,7 +209,7 @@ For security, we rely on incoming connection restriction at the AWS Security Gro
 * IE Enhanced Security Configuration
 * Windows Defender Antivirus
 
-### Install tools and dependencies
+#### Install tools and dependencies
 
 * install pipeline dependencies
   * (_NVIDIA Tesla drivers compatible with G5 instances are pre-installed_)
@@ -239,14 +239,14 @@ For security, we rely on incoming connection restriction at the AWS Security Gro
 
 You will be required to activate Matlab using your own license and configure access via rclone to input data.
 
-### Install optional tools
+#### Install optional tools
 
 * [mysys2](https://www.msys2.org/), used for Unix shell emulation
 * AWS command line interface
 * Google Chrome
 * VS Code
 
-### Download latest stable copy of source code
+#### Download latest stable copy of source code
 
 Finally, [download](https://github.com/andrewrech/codex-preprocess/releases) this repository and extract to `\C:\Program Files\codex-preprocess`. Then move the two `*.jar` files in the source code top level directory to the Matlab jar folder as described in the README.
 
