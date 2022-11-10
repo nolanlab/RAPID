@@ -33,9 +33,14 @@ for ii = 1:length(reg_range)
 
         % check for existence of output directory
         % and continue if none exists
-        im_folder_name = [path_input,'Cyc',num2str(cyc,'%03.f'),'_reg',num2str(reg,'%03.f')];
-        im_folder_name_alt = [path_input,'Cyc',num2str(cyc,'%01.f'),'_reg',num2str(reg,'%01.f')];
-
+        if strcmp(mode,'memopoint')
+            im_folder_name = [path_input,'Cyc',num2str(cyc,'%03.f'),'_reg',num2str(reg,'%03.f')];
+            im_folder_name_alt = [path_input,'Cyc',num2str(cyc,'%01.f'),'_reg',num2str(reg,'%01.f')];
+        elseif strcmp(mode,'multipoint')
+            im_folder_name = [path_input,'Cyc',num2str(cyc,'%03.f'),'_reg',num2str(1,'%03.f')];
+            im_folder_name_alt = [path_input,'Cyc',num2str(cyc,'%01.f'),'_reg',num2str(1,'%01.f')];
+        end 
+            
         if ~isdir(im_folder_name) && ~isdir(im_folder_name_alt)
             disp([path_input, ' cycle ',num2str(cyc,'%03.f'),' reg ',num2str(reg,'%03.f'), ' does not exist, skipping...'])
             continue
