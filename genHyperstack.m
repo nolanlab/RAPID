@@ -10,14 +10,20 @@
 %  - identify the best focus plane
 % rename tiles for stitching
 % =========================================================================
-function genHyperstack(reg_range, cyc_range, path_input_matlab,cyc_last,nCh,rowFinal,colFinal)
+function genHyperstack(reg_range, cyc_range, path_input_matlab,cyc_last,nCh,mjipath,ijpath,pluginpath,rowFinal,colFinal)
 
+% % setup path
+% javaaddpath 'C:\Program Files\MATLAB\R2020a\java\jar\mij.jar'
+% javaaddpath 'C:\Program Files\MATLAB\R2020a\java\jar\ij.jar'
+% 
+% % start
+% MIJ.start('C:\Users\guolanlu\Documents\fiji-win64\Fiji.app\plugins\')
 % setup path
-javaaddpath 'C:\Program Files\MATLAB\R2021b\java\jar\mij.jar'
-javaaddpath 'C:\Program Files\MATLAB\R2021b\java\jar\ij.jar'
+javaaddpath(mjipath)
+javaaddpath(ijpath)
 
 % start
-MIJ.start('C:\Program Files\fiji-win64\Fiji.app\plugins\')
+MIJ.start(pluginpath)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % path_input_matlab = ['X:\Guolan\test_deconvolution\multicycle_2020_09_preprocess\'];
