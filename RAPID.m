@@ -128,7 +128,7 @@ disp('Background subtraction done...');
 %% concentenate all the stacks into a hyperstack
 % tic
 disp('Start concatenation...');
-genHyperstack(reg_range, cyc_range, path_output,nCyc,nCh)
+genHyperstack(reg_range, cyc_range, path_output,nCyc,nCh,mjipath,ijpath,pluginpath,rowFinal,colFinal)
 disp('Concatenation done...');
 % toc
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
