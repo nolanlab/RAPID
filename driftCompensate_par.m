@@ -95,7 +95,14 @@ for ii = 1:length(reg_range)
 
         % --------------- estimate transform using dapi channel----------------
         % this file name needs to be changed to not include cycle info
-        filename = [path_input,'reg',num2str(reg),'\1_deconv_stitch\cycle',num2str(cyc),'\reg',num2str(reg),'_cycle',num2str(cyc),'_montage.tif'];
+        if strcmp(mode,‘multipoint’)
+            filename = [path_input,‘reg’,num2str(reg),‘\1_deconv_stitch\cycle’,num2str(cyc),‘\reg’,num2str(reg),‘_tile_1.tif’];
+        elseif strcmp(mode,‘memopoint’)
+            filename = [path_input,‘reg’,num2str(reg),‘\1_deconv_stitch\cycle’,num2str(cyc),‘\reg’,num2str(reg),‘_cycle’,num2str(cyc),‘_montage.tif’];
+        end
+    
+        % this file name needs to be changed to not include cycle info
+        % filename = [path_input,'reg',num2str(reg),'\1_deconv_stitch\cycle',num2str(cyc),'\reg',num2str(reg),'_cycle',num2str(cyc),'_montage.tif'];
         %         info = imfinfo(filename);
         %         nCh   = size(info,1);
         im_dapi = imread(filename,1);
