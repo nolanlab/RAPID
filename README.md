@@ -1,9 +1,10 @@
 
 ## RAPID: a Real-time, GPU-Accelerated Parallelized Image processing software for large-scale multiplexed fluorescence microscopy Data
 
-#### Reference:
+### Reference:
 Lu G, Baertsch MA, Hickey JW, Goltsev Y, Rech AJ, Mani L, Forgó E, Kong C, Jiang S, Nolan GP, Rosenthal EL. A real-time GPU-accelerated parallelized image processor for large-scale multiplexed fluorescence microscopy data. Front Immunol. 2022 Sep 23;13:981825. doi: 10.3389/fimmu.2022.981825. PMID: 36211386; PMCID: PMC9539451.
 
+### Overview:
 RAPID deconvolves large-scale, high-dimensional fluorescence imaging data, stitches and registers images with axial and lateral drift correction, and minimizes tissue autofluorescence such as that introduced by erythrocytes.
 <br/>
 
